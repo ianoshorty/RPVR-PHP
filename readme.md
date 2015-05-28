@@ -1,4 +1,4 @@
-# RPVRPHP - Axel Download Manager With Put.io Integration - PHP Implentation
+# RPVRPHP - Axel Download Manager With Put.io Integration - PHP Implementation
 
 [RPVR](https://github.com/ianoshorty/RPVR) is a tool written in [Meteor] to manage the download and cleanup of files using [Axel]. This is a PHP implementation of
 the same functionality.
