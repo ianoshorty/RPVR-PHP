@@ -1,28 +1,77 @@
-# Laravel 5.0 Boilerplate With Bower, BrowserSync, Bootstrap-SASS and Mailcatcher
+# RPVRPHP - Axel Download Manager With Put.io Integration - PHP Implentation
 
-This is the Laravel 5.0 boilerplate I work with on my internal projects. It includes:
+[RPVR](https://github.com/ianoshorty/RPVR) is a tool written in [Meteor] to manage the download and cleanup of files using [Axel]. This is a PHP implementation of
+the same functionality.
+Inspired by [Put IO Manager], the tool is intended to be run on a Linux download box and offer [Put IO] integration. It will:
 
-  - Bower for front end package management. Files are placed in the /resources/assets/bower directory
-  - BrowserSync for rapid application development and testing. See below for setup instructions.
-  - Bootstrap-SASS - prefer SASS implementation over LESS, installed via bower and can be easily removed.
-  - Mailcatcher - Catches outbound email - see below for usage instructions.
-  - Standard files - CHANGELOG.md and README.md
-  
-It is intended to be used with Homestead, but should be fairly compatible across any VM / LAMP installation.
+##### General
 
-## Project Setup and Usage
+  - Download, monitor, pause and cancel files using [Axel] - offering a Web GUI.
+  - When the download completes, clean up and run any follow up scripts you like
 
-To use this boilerplate, do the following: 
+##### Put IO Integration
 
-1. Clone the repo.
-2. Alter `CHANGELOG.md` and `README.md`.
-3. Update `gulpfile.js` with correct hostname for site.
-4. Copy `.env.example` file to `.env` and update vars as appropriate.
-5. SSH into installation
-6. Run `$ ./setup.sh` to setup Mailcatcher
-7. Run `$ npm install` to install dependancies.
-8. Run `$ gulp watch` to start developing.
-9. To run Mailcatcher - `$ mailcatcher --ip 192.168.10.10`
+  - Add files to put.io transfer queue
+  - Watch for files that were added to put.io and trigger a download of those files using [Axel]
+  - When the download completes, remove the file from the put.io storage
 
 ### Version
-1.0.0
+0.0.1
+
+---
+### Prerequesites
+
+In order to install RPVR you will need:
+
+ - [LAMP] - A full Lamp stack
+ - [Node.JS] - Access to NodeJS for live update information
+ - [Axel] 	- A linux server with Axel installed
+ - [Put IO] - A Put.io account and API access for PutIO integration
+
+### Installation
+
+// Install Instructions
+
+```sh
+$ shell commmand here
+```
+
+---
+### Development
+
+Want to contribute? Great! Feel free to get in touch with me and we can collaborate, or fork / pull as you like.
+
+### Todo's
+
+// Add TODOs
+
+---
+### License
+The MIT License (MIT)
+
+Copyright (c) 2015 Ian Outterside ([Ian Builds Apps]).
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+[Meteor]:https://www.meteor.com/
+[Put IO]:http://put.io
+[Put IO Manager]:https://github.com/sjlu/Put.io-Manager
+[Axel]:http://axel.alioth.debian.org
+[Ian Builds Apps]:http://www.ianbuildsapps.com
+[Node.JS]:https://nodejs.org
