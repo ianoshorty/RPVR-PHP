@@ -1,6 +1,5 @@
 [![Codeship Status for ianoshorty/RPVR-PHP](https://codeship.com/projects/6dc74f60-e7a0-0132-bf13-2a723c8c6817/status?branch=master)](https://codeship.com/projects/82587)
 [![Code Climate](https://codeclimate.com/github/ianoshorty/RPVR-PHP/badges/gpa.svg)](https://codeclimate.com/github/ianoshorty/RPVR-PHP)
-[![Test Coverage](https://codeclimate.com/github/ianoshorty/RPVR-PHP/badges/coverage.svg)](https://codeclimate.com/github/ianoshorty/RPVR-PHP/coverage)
 
 # RPVRPHP - Axel Download Manager With Put.io Integration - PHP Implementation
 
@@ -73,6 +72,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
+[LAMP]:http://laravel.com/docs/5.0/homestead
 [Meteor]:https://www.meteor.com/
 [Put IO]:http://put.io
 [Put IO Manager]:https://github.com/sjlu/Put.io-Manager
