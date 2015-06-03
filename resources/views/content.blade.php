@@ -15,15 +15,19 @@
 
             <div class="col-sm-12">
 
-                <form method="post" class="form-inline">
+                {!! Form::open(['class' => 'form-inline']) !!}
+
                     <div class="form-group">
-                        <label for="url">Download url</label>
-                        <input type="text" class="form-control" name="url" id="url" placeholder="http://www.example.com/test.doc">
-                        <input type="text" class="form-control" name="filename" id="filename" placeholder="test.doc">
+
+                        {!! Form::label('url', 'Download url') !!}
+                        {!! Form::text('url', null, ['class' => 'form-control']) !!}
+                        {!! Form::text('filename', null, ['class' => 'form-control']) !!}
+
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Download</button>
-                </form>
+                    {!! Form::button('Download', ['class' => 'btn btn-primary', 'type' => 'submit']) !!}
+
+                {!! Form::close() !!}
 
             </div>
 

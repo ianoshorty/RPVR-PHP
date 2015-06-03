@@ -11,4 +11,7 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'DownloadController@index');
+
+
+Route::post('/', 'DownloadController@download');
