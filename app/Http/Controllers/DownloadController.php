@@ -39,6 +39,7 @@ class DownloadController extends Controller {
         $axel->start($download['url'], $download['filename'], null, function(AxelDownload $axel, $status, $complete, $error) {
 
             if (empty($error)) $axel->clearCompleted();
+            else dd($axel);
         });
 
         return redirect('/');
