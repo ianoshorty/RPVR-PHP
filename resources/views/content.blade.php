@@ -40,13 +40,14 @@
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Filename</th>
-                        <th>Percentage complete</th>
-                        <th>Speed</th>
-                        <th>TTL</th>
-                        <th>Pause Download</th>
-                        <th>Cancel Download</th>
+                        <th class="col-sm-1">#</th>
+                        <th class="col-sm-3">Filename</th>
+                        <th class="col-sm-4">Progress</th>
+                        <th class="col-sm-1">Percentage complete</th>
+                        <th class="col-sm-1">Speed</th>
+                        <th class="col-sm-1">TTL</th>
+                        <th class="col-sm-1">Pause Download</th>
+                        <th class="col-sm-1">Cancel Download</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -54,6 +55,13 @@
                     <tr class="active">
                         <td>1</td>
                         <td>fileName</td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                    <span class="sr-only">70% Complete (success)</span>
+                                </div>
+                            </div>
+                        </td>
                         <td>percentage%</td>
                         <td>speed</td>
                         <td>ttl</td>
@@ -61,8 +69,15 @@
                         <td><button id="cancel" class="btn btn-danger">Cancel</button></td>
                     </tr>
                     <tr class="info">
-                        <td>1</td>
+                        <td>2</td>
                         <td>fileName</td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                    <span class="sr-only">40% Complete (success)</span>
+                                </div>
+                            </div>
+                        </td>
                         <td>percentage%</td>
                         <td>speed</td>
                         <td>ttl</td>
@@ -70,8 +85,15 @@
                         <td><button id="cancel" class="btn btn-danger">Cancel</button></td>
                     </tr>
                     <tr class="success">
-                        <td>2</td>
+                        <td>3</td>
                         <td>fileName</td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                    <span class="sr-only">100% Complete (success)</span>
+                                </div>
+                            </div>
+                        </td>
                         <td>percentage%</td>
                         <td>speed</td>
                         <td>ttl</td>
@@ -79,8 +101,15 @@
                         <td><button id="cancel" class="btn btn-success">Remove</button></td>
                     </tr>
                     <tr class="danger">
-                        <td>3</td>
+                        <td>4</td>
                         <td>fileName</td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                    <span class="sr-only">80% Complete (danger)</span>
+                                </div>
+                            </div>
+                        </td>
                         <td>percentage%</td>
                         <td>speed</td>
                         <td>ttl</td>

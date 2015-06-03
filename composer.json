@@ -5,7 +5,8 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "5.0.*"
+		"laravel/framework": "5.0.*",
+		"axel-php/axel": "^0.0.10"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
