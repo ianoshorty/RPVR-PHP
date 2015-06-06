@@ -41,11 +41,6 @@ class Download extends Command implements SelfHandling, ShouldBeQueued {
 
         event(new DownloadDidStart($this->axel));
 
-        /*
-        $this->axel->addDownloadParameters(['callback'=>function($axel, $status, $complete, $error) {
-            if ($complete && empty($error)) $axel->clearCompleted();
-        }]);*/
-
         $queue->later(Carbon::now()->addSeconds(10), new DownloadUpdate($this->axel));
 	}
 }

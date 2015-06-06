@@ -51,14 +51,11 @@ class DownloadController extends Controller {
             'filename'      => $download['filename'],
             'download_path' => '/var/www/rpvrphp/downloads/',
             'callback'      => function($axel, $status, $complete, $error) {
-                //if ($complete && empty($error)) $axel->clearCompleted();
-
-                print_r(func_get_args());
+                if ($complete && empty($error)) $axel->clearCompleted();
             }
         ]);
 
         $this->dispatch(new Download($axel));
-        //$queue->later(Carbon::now()->addSeconds(10), new DownloadUpdate($axel));
 
         //return redirect('/');
     }

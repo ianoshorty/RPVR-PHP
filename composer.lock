@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "axel-php/axel",
-            "version": "0.0.12",
+            "version": "0.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ianoshorty/axel-php.git",
-                "reference": "ba2225a53dc45b4b89f5aca1c5fb9981c1e5663f"
+                "reference": "58b8cf6b50cdfa42557cbfda48176a66c52735f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ianoshorty/axel-php/zipball/ba2225a53dc45b4b89f5aca1c5fb9981c1e5663f",
-                "reference": "ba2225a53dc45b4b89f5aca1c5fb9981c1e5663f",
+                "url": "https://api.github.com/repos/ianoshorty/axel-php/zipball/58b8cf6b50cdfa42557cbfda48176a66c52735f9",
+                "reference": "58b8cf6b50cdfa42557cbfda48176a66c52735f9",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
                 "download queue",
                 "file download"
             ],
-            "time": "2015-06-06 20:34:24"
+            "time": "2015-06-06 22:35:39"
         },
         {
             "name": "classpreloader/classpreloader",
