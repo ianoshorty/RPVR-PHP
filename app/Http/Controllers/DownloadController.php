@@ -1,7 +1,10 @@
 <?php namespace App\Http\Controllers;
 
-use App\Commands\AxelDownloadCommand;
+use App\Commands\Download;
+use App\Commands\DownloadUpdate;
 use App\Http\Requests\DownloadRequest;
+use Carbon\Carbon;
+use Illuminate\Contracts\Queue\Queue;
 use Illuminate\Support\Facades\Request;
 use Axel\AxelDownload;
 
@@ -39,33 +42,24 @@ class DownloadController extends Controller {
      * @param DownloadRequest $request The validated download request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function download(DownloadRequest $request) {
+    public function download(DownloadRequest $request, Queue $queue) {
 
         $download = $request->all();
-
-        /*
-        $axel = new AxelDownload();
-        $axel->start($download['url'], $download['filename'], '/var/www/rpvrphp/downloads/', function(AxelDownload $axel, $status, $complete, $error) {
-
-            if (empty($error)) $axel->clearCompleted();
-            else dd($axel);
-        });
-        */
 
         $axel = (new AxelDownload())->addDownloadParameters([
             'address'       => $download['url'],
             'filename'      => $download['filename'],
             'download_path' => '/var/www/rpvrphp/downloads/',
-            'callback'      => function(AxelDownload $axel, $status, $complete, $error) {
+            'callback'      => function($axel, $status, $complete, $error) {
+                //if ($complete && empty($error)) $axel->clearCompleted();
 
-                if ($status && empty($error)) $axel->clearCompleted();
-                else dd($axel);
+                print_r(func_get_args());
             }
         ]);
 
-        $this->dispatch(new AxelDownloadCommand($axel));
+        $this->dispatch(new Download($axel));
+        //$queue->later(Carbon::now()->addSeconds(10), new DownloadUpdate($axel));
 
-        return redirect('/');
+        //return redirect('/');
     }
-
 }
