@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Commands\AxelDownloadCommand;
 use App\Http\Requests\DownloadRequest;
 use Illuminate\Support\Facades\Request;
 use Axel\AxelDownload;
@@ -42,12 +43,27 @@ class DownloadController extends Controller {
 
         $download = $request->all();
 
+        /*
         $axel = new AxelDownload();
-        $axel->start($download['url'], $download['filename'], null, function(AxelDownload $axel, $status, $complete, $error) {
+        $axel->start($download['url'], $download['filename'], '/var/www/rpvrphp/downloads/', function(AxelDownload $axel, $status, $complete, $error) {
 
             if (empty($error)) $axel->clearCompleted();
             else dd($axel);
         });
+        */
+
+        $axel = (new AxelDownload())->addDownloadParameters([
+            'address'       => $download['url'],
+            'filename'      => $download['filename'],
+            'download_path' => '/var/www/rpvrphp/downloads/',
+            'callback'      => function(AxelDownload $axel, $status, $complete, $error) {
+
+                if ($status && empty($error)) $axel->clearCompleted();
+                else dd($axel);
+            }
+        ]);
+
+        $this->dispatch(new AxelDownloadCommand($axel));
 
         return redirect('/');
     }
