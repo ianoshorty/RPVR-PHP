@@ -21,6 +21,7 @@ elixir(function(mix) {
         '/bower/jquery/dist/jquery.js',
         '/bower/bootstrap-sass/assets/javascripts/bootstrap.js',
         '/bower/bootstrap-sass/assets/javascripts/bootstrap-sprockets.js',
+        '/bower/socket.io-client/socket.io.js',
         '/js/app.js'
     ], 'public/js/app.js', 'resources/assets');
 

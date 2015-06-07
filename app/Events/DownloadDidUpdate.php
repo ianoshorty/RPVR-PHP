@@ -9,9 +9,9 @@ class DownloadDidUpdate extends Event {
 
 	use SerializesModels;
 
-    protected $download;
+    public $download;
 
-    protected $status;
+    public $status;
 
 	/**
 	 * Create a new event instance.
