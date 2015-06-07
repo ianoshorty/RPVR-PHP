@@ -57,6 +57,6 @@ class DownloadController extends Controller {
 
         $this->dispatch(new Download($axel));
 
-        //return redirect('/');
+        return redirect('/');
     }
 }
